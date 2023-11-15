@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simulador de Planos</title>
+    <link rel="stylesheet" type ="text/css" href="planos1.css">
+    
+</head>
+
+<body>
+    
+    <button id="unifamiliarButton" onclick="VersionPremiun()" >Casa</button> 
+    <button id="edificacionButton">Edificio</button>
+    
+    
+    <div id="formContainner" class="floor-container"></div>
+
+    <div class="content" id="unifamiliarContent">   
+        <button onclick="pasarelaPagos()">ACCEDER A PAQUETE COMPLETO</button>
+    </div>
+    
+    <div class="container" id="edificacion">
+        <form name="formulario"> 
+          <label>Numero de pisos del edificio</label>
+            <div class="col">
+                <select name=edificio id="edificio" > 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <label>Tipo de construccíon</label>
+            <div class="col">
+              <select name=tipo id="tipo"> 
+                <option value="tipo_1" selected>Vivienda</option>
+                <option value="tipo_2">Vivienda + Cochera</option>
+                <option value="tipo_3">Vivienda + Tienda</option>
+              </select>
+            </div>
+          <!-- <input type="submit" value="Obtener plano" /> -->
+        </form>
+        <button id="GenerarButton">Generar</button>
+    </div>
+
+    <div class="content" id="multifamiliarContent">
+        <h2>Contenido Departamento</h2>
+        <div class="row">
+            <div class="column">
+                <p>Ingrese las dimensiones:</p>
+                <label for="ancho2" onchange="actualizarOpciones">Ancho:</label>
+                <select id="ancho2">
+                    <option value="6">6 metros</option>
+                    <option value="7">7 metros</option>
+                    <option value="8">8 metros</option>
+                </select><br>
+
+                <label for="largo2">Largo:</label>
+                <select id="largo2">
+                    <!-- Opciones iniciales para Ancho de 6 metros -->
+                    <option value="17">17 metros</option>
+                    <option value="15">15 metros</option>
+                    <option value="18">16 metros</option>
+                </select><br>
+                <p>Posición de la escalera:</p>
+                <select id="escalera2"><br>
+                    <option value="1">Adelante</option>
+                    <option value="2">Medio</option>
+                    <option value="3">Fondo</option>
+                </select>
+
+                <p>Número de Cuartos:</p>
+                <select id="cuartos2">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <p>Terraza:</p>
+                <select id="terraza2">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+
+                <p>Número de Baños:</p>
+                <select id="banos2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <p>Sala:</p>
+                <select id="sala2">
+                    <option value="si">Sí</option>
+                    <!-- <option value="no">No</option> -->
+                </select>
+
+                <p>Comedor:</p>
+                <select id="comedor2">
+                    <option value="si">Sí</option>
+                    <!-- <option value="no">No</option> -->
+                </select>
+
+                <p>Cocina:</p>
+                <select id="cocina2">
+                    <option value="si">Sí</option>
+                    <!-- <option value="no">No</option> -->
+                </select>
+
+                <p>Lavandería:</p>
+                <select id="lavanderia2">
+                    <option value="si">Sí</option>
+                    <!-- <option value="no">No</option> -->
+                </select><br>
+                <button onclick="mostrarImagen2()">Generar Plano </button>
+            </div>
+
+            <div class="column">
+                
+                <div id="imagenContainer2">
+                    <img id="imagen2" style="display: none;">
+                </div>
+                <button id="descargarButton2" onclick="descargarPDF2()" style="display: none;">Descargar en
+                    PDF</button>
+                <button onclick="pasarelaPagos()">ACCEDER A PAQUETE COMPLETO</button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="planos1.js"></script>
+</html>

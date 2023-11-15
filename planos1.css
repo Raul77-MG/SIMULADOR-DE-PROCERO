@@ -1,0 +1,36 @@
+
+.content {
+    display: none;
+}
+
+/* Estilo para los botones en estado normal */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Estilo para los botones en estado "clic" */
+button:active {
+    background-color: #e74c3c;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 10px; /* Add padding for spacing */
+
+}
+.custom-image {
+    margin: 5px; /* Ajusta el margen según sea necesario */
+    max-width: 100%; /* Asegura que la imagen se ajuste dentro de su contenedor */
+    max-height: 100%;
+}
+
+
